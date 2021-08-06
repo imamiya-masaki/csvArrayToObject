@@ -27,9 +27,14 @@ class csvToObject {
       return Error("outputKey not has srcKey")
     }
   }
+  registUUIDIndex(index) {
+    if (this._numberHeader.hasOwnProperty(String(index))) {
+      this._uuidKey = this._numberHeader[String(index)]
+    }
+  }
   registUUIDKey(key) {
     if (!this._header.hasOwnProperty(key)) {
-      return Error("registed header has not uuidKey")
+      return Error("registed header has not uuidKey:", + String(key))
     }
     this._uuidKey = _changeType(key)
   }

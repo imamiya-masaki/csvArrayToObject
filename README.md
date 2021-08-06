@@ -89,6 +89,9 @@ srcにheader名,keyに出力したいKey名を入力し、登録します。
 
 UUIDKeyをkeyで登録します。
 
+## registUUIDIndex(index)
+
+UUIDKeyを該当するindexのcolumn名として登録します。
 ## registOutputKeys(outputKeys)
 
 key名とvalueでOutputKeysを登録します。
