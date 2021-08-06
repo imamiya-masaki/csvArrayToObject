@@ -1,11 +1,15 @@
 {
   "name": "csv-array-to-object",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "",
-  "main": "test.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "imamiya-masaki <imamiyagit@gmail.com> (https://github.com/imamiya-masaki)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^5.5.0",
+    "csv-array-to-object": "^1.0.5"
+  }
 }

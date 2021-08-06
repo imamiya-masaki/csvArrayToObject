@@ -106,4 +106,4 @@ class csvToObject {
   }
 }
 // export default csvToObject
-module.exports = { csvToObject }
+module.exports = csvToObject
