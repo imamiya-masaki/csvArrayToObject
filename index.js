@@ -41,7 +41,7 @@ class csvToObject {
       this.registOutputKey(key,val)
     }
   }
-  registHeader(header, _uuidKey) {
+  registHeader(header, uuidKey) {
     if (!Array.isArray(header)) {
       return Error("not array")
     }
@@ -52,8 +52,8 @@ class csvToObject {
         this.registOutputKey(header[i], header[i])
       }
     }
-    if (_uuidKey) {
-      const e = this.registUUIDKey(_uuidKey)
+    if (uuidKey) {
+      const e = this.registUUIDKey(uuidKey)
       if (e) {
         throw Error(e)
       }
@@ -62,6 +62,8 @@ class csvToObject {
   init() {
     this._outputKeys = {}
     this._header = {}
+    this._numberHeader = {}
+    this._uuidKey = ""
   }
   constructor(header = [], _uuidKey, outputKeys = {}) {
     this.init()
