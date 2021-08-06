@@ -28,7 +28,7 @@ class csvToObject {
     }
   }
   registUUIDKey(key) {
-    if (!_header.hasOwnProperty(key)) {
+    if (!this._header.hasOwnProperty(key)) {
       return Error("registed header has not uuidKey")
     }
     this._uuidKey = _changeType(key)
@@ -84,8 +84,8 @@ class csvToObject {
         return Error("not child array: " + String(i))
       }
       const uuidKey = arr[uuidIndex]
-      for (const [key, index] of Object.entries(_header)) {
-        if (_uuidKey == key) {
+      for (const [key, index] of Object.entries(this._header)) {
+        if (this._uuidKey == key) {
           // uuidの場合はcontinue
           continue
         }
@@ -94,7 +94,7 @@ class csvToObject {
         if (!output.hasOwnProperty(pickOutputKey)) {
           output[pickOutputKey] = {}
         }
-        output[pickOutValue][uuidKey] = pickOutValue
+        output[pickOutputKey][uuidKey] = pickOutValue
       }
     }
     return output
@@ -105,3 +105,5 @@ class csvToObject {
     return this.exec(data.slice(1))
   }
 }
+// export default csvToObject
+module.exports = { csvToObject }
